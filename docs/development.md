@@ -22,8 +22,8 @@ This guide helps you set up a development environment for contributing to Octopu
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/octopus-ai/octopus-ide.git
-   cd octopus-ide
+   git clone https://github.com/maurihimanshu/Octopus_IDE.git
+   cd Octopus_IDE
    ```
 
 2. **Install Dependencies**
@@ -53,11 +53,11 @@ This guide helps you set up a development environment for contributing to Octopu
 
 ```bash
 # Clone the repository
-git clone https://github.com/octopus-ai/octopus-ide.git
+git clone https://github.com/maurihimanshu/Octopus_IDE.git
 cd octopus-ide
 
 # Add upstream remote for syncing with main repository
-git remote add upstream https://github.com/octopus-ai/octopus-ide.git
+git remote add upstream https://github.com/maurihimanshu/Octopus_IDE.git
 
 # Create a new branch for your feature
 git checkout -b feature/your-feature-name
