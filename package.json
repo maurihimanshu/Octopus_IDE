@@ -1,9 +1,9 @@
 {
-  "name": "code-oss-dev",
-  "version": "1.104.0",
-  "distro": "69861287f4af04d36b926eb311cccb4b5680a018",
+  "name": "octopus-ai-ide",
+  "version": "1.0.0-alpha",
+  "description": "The Intelligent Development Environment - AI-powered coding with multiple models",
   "author": {
-    "name": "Microsoft Corporation"
+    "name": "Octopus AI IDE Team"
   },
   "license": "MIT",
   "main": "./out/main.js",
@@ -15,6 +15,13 @@
     "test-browser-no-install": "node test/unit/browser/index.js",
     "test-node": "mocha test/unit/node/index.js --delay --ui=tdd --timeout=5000 --exit",
     "test-extension": "vscode-test",
+    "test:unit": "npm run test-node",
+    "test:integration": "npm run test-extension",
+    "test:e2e": "npm run test-browser",
+    "test:watch": "npm run test:unit -- --watch",
+    "test:coverage": "npm run test:unit -- --coverage",
+    "test:e2e:headless": "npm run test-browser-no-install",
+    "test:ai-models": "echo 'AI model tests - Feature planned for Phase 2'",
     "preinstall": "node build/npm/preinstall.js",
     "postinstall": "node build/npm/postinstall.js",
     "compile": "node ./node_modules/gulp/bin/gulp.js compile",
@@ -35,6 +42,33 @@
     "precommit": "node build/hygiene.js",
     "gulp": "node --max-old-space-size=8192 ./node_modules/gulp/bin/gulp.js",
     "electron": "node build/lib/electron",
+    "electron:dev": "npm run electron",
+    "lint": "npm run eslint",
+    "lint:fix": "npm run eslint -- --fix",
+    "format": "echo 'Code formatting - Use editor format on save'",
+    "typecheck": "npm run compile-check-ts-native",
+    "build:dev": "npm run compile",
+    "build:prod": "npm run compile-build",
+    "build:main": "npm run gulp -- compile-main",
+    "build:renderer": "npm run gulp -- compile-renderer",
+    "build:extensions": "npm run compile-extensions-build",
+    "package": "echo 'Packaging - Use electron-builder for distribution'",
+    "package:win": "echo 'Windows packaging - Feature planned'",
+    "package:mac": "echo 'macOS packaging - Feature planned'",
+    "package:linux": "echo 'Linux packaging - Feature planned'",
+    "profile:main": "echo 'Profiling tools - Feature planned'",
+    "profile:renderer": "echo 'Profiling tools - Feature planned'",
+    "analyze:bundle": "echo 'Bundle analysis - Feature planned'",
+    "clean": "rimraf out* build/lib/out* extensions/**/out/",
+    "rebuild": "npm run clean && npm install && npm run compile",
+    "validate:api-keys": "echo 'API key validation - Feature planned for Phase 2'",
+    "validate:config": "echo 'Configuration validation - Feature planned'",
+    "health": "echo 'Health check - Feature planned'",
+    "info": "echo 'System info - Feature planned'",
+    "test:ai": "echo 'AI feature tests - Feature planned for Phase 2'",
+    "db:setup": "echo 'Database setup - Feature planned for Phase 2'",
+    "db:migrate": "echo 'Database migration - Feature planned for Phase 2'",
+    "db:seed": "echo 'Database seeding - Feature planned for Phase 2'",
     "7z": "7z",
     "update-grammars": "node build/npm/update-all-grammars.mjs",
     "update-localization-extension": "node build/npm/update-localization-extension.js",
@@ -229,10 +263,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/microsoft/vscode.git"
+    "url": "https://github.com/maurihimanshu/Octopus_IDE.git"
   },
   "bugs": {
-    "url": "https://github.com/microsoft/vscode/issues"
+    "url": "https://github.com/maurihimanshu/Octopus_IDE.git/issues"
   },
   "optionalDependencies": {
     "windows-foreground-love": "0.5.0"
